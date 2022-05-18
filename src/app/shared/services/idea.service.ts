@@ -36,8 +36,8 @@ export class IdeaService {
     this.db.object('/idea/' + id).remove();
   }
 
-  update(obj: Idea) {
-    return this.ideaRef.update({
+  update(id, obj: Idea) {
+    return this.get(id).update({
       email: obj.email,
       name: obj.name,
       mobile: obj.mobile,

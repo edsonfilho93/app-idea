@@ -30,7 +30,6 @@ export class IdeaCreatePage implements OnInit {
       this.service
         .add(this.ideaForm.value)
         .then((res) => {
-          console.log(res);
           this.ideaForm.reset();
           this.router.navigate(['/home']);
         })
